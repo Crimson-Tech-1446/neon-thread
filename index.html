@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Thread</title>
+<style>
+  :root{
+    --bg:#060708;
+    --panel:#0d1210;
+    --cyan:#3ee6c4;
+    --pink:#ff2e5b;
+    --text:#e6e8ef;
+    --muted:#7c8794;
+    --border:#1c2b28;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(62,230,196,0.08), transparent 55%),
+      radial-gradient(ellipse at 80% 100%, rgba(255,46,91,0.08), transparent 55%);
+    color:var(--text);
+    font-family:'Courier New', 'SF Mono', Consolas, monospace;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:24px;
+  }
+  .wrap{max-width:420px;width:100%;text-align:center;}
+
+  h1{
+    font-size:2.6rem;
+    letter-spacing:4px;
+    margin:0;
+    color:var(--cyan);
+    text-shadow:0 0 8px rgba(62,230,196,0.6), 0 0 24px rgba(62,230,196,0.35);
+    font-weight:700;
+  }
+  .tag{
+    color:var(--pink);
+    letter-spacing:3px;
+    font-size:0.8rem;
+    margin:10px 0 40px;
+    text-transform:uppercase;
+  }
+
+  .desc{
+    color:var(--muted);
+    font-size:0.9rem;
+    line-height:1.7;
+    margin-bottom:40px;
+  }
+
+  .links{display:flex;flex-direction:column;gap:14px;}
+
+  a.btn{
+    position:relative;
+    display:block;
+    padding:16px 20px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:6px;
+    color:var(--text);
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    transition:border-color 0.15s, color 0.15s, box-shadow 0.15s;
+  }
+  a.btn:hover{
+    border-color:var(--cyan);
+    color:var(--cyan);
+    box-shadow:0 0 14px rgba(62,230,196,0.25);
+  }
+  a.btn::before, a.btn::after{
+    content:"";
+    position:absolute;
+    width:8px;height:8px;
+    border-color:var(--cyan);
+    opacity:0.7;
+  }
+  a.btn::before{top:-1px;left:-1px;border-top:2px solid var(--cyan);border-left:2px solid var(--cyan);}
+  a.btn::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--cyan);border-right:2px solid var(--cyan);}
+
+  a.primary{
+    border-color:var(--cyan);
+    color:var(--cyan);
+    background:rgba(62,230,196,0.06);
+  }
+  a.primary::before, a.primary::after{border-color:var(--pink);}
+  a.primary:hover{box-shadow:0 0 18px rgba(62,230,196,0.4);}
+
+  footer{
+    margin-top:56px;
+    color:var(--muted);
+    font-size:0.75rem;
+    letter-spacing:1px;
+  }
+  footer a{color:var(--muted);}
+  footer a:hover{color:var(--cyan);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>NEON THREAD</h1>
+  <div class="tag">Select Protocol</div>
+
+  <p class="desc">
+    A fast-paced dash-and-dodge arcade game built by CrimsonTech.<br>
+    Thread the gap. Beat your best score.
+  </p>
+
+  <div class="links">
+    <a class="btn primary" href="https://play.google.com/store/apps" target="_blank" rel="noopener">&gt; Get it on Google Play</a>
+    <a class="btn" href="privacy.html">Privacy Policy</a>
+    <a class="btn" href="terms.html">Terms of Service</a>
+  </div>
+
+  <footer>
+    Neon Thread by CrimsonTech &middot; <a href="mailto:crimson1446@gmail.com">crimson1446@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
